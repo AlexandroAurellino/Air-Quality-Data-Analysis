@@ -209,3 +209,4 @@ if 'm' not in st.session_state:
 
 # Tampilkan peta dalam Streamlit
 st_data = st_folium(st.session_state['m'], width=700, height=500)
+
