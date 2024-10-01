@@ -6,7 +6,12 @@ import folium
 from streamlit_folium import st_folium
 
 # Load cleaned Air Quality dataset
-df = pd.read_csv('cleaned_air_quality_data.csv')
+# df = pd.read_csv('cleaned_air_quality_data.csv')
+# df["datetime"] = pd.to_datetime(df["datetime"])
+
+df_part1 = pd.read_csv('cleaned_air_quality_data_part1.csv')
+df_part2 = pd.read_csv('cleaned_air_quality_data_part2.csv')
+df = pd.concat([df_part1, df_part2])
 df["datetime"] = pd.to_datetime(df["datetime"])
 
 # Mengatur tema seaborn
